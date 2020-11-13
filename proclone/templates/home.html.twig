@@ -1,0 +1,30 @@
+
+{% extends 'base.html.twig' %}
+
+{% form_theme formArticle 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    
+<h1>bonjour</h1>
+{{ form_start(formArticle) }}
+<div class="form-group">
+<label for="">Titre</label>
+{{form_widget(formArticle.title)}}
+</div>
+
+<div class="form-group">
+<label for="">Auteur</label>
+{{form_widget(formArticle.Auteur)}}
+</div>
+
+
+<center><div class="form-group">
+<label for=""></label>
+{{form_widget(formArticle.Save)}}
+</div></center>
+
+
+    {{ form(formArticle)}}
+
+    {{ form_end(formArticle) }}
+{% endblock %}
